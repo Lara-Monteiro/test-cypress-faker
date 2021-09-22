@@ -1,0 +1,37 @@
+{
+  "name": "cucumber-preprocessor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:tags": "cypress-tags run -e",
+    "cy:report": "node ./cypress/support/reporter.js",
+    "cy:clear": "node ./cypress/support/clear.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lara Monteiro",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.0.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "faker": "^5.5.3",
+    "fs-extra": "^10.0.0",
+    "jsonschema": "^1.4.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "rimraf": "^3.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports/cucumber-json"
+    }
+  },
+  "dependencies": {
+    "faker-br": "^0.4.1"
+  }
+}

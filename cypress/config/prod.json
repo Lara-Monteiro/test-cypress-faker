@@ -1,0 +1,9 @@
+{
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "baseUrl": "https://divvino.com.br",
+    "env": {
+        "global_timeout": 60000,
+        "environment": "PROD"
+    }
+}
+  
